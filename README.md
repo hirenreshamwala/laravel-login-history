@@ -1,7 +1,7 @@
 # Laravel Login History
 
-[![Latest Version on Packagist](https://img.shields.io/packagist/v/xt/login-history.svg?style=flat-square)](https://packagist.org/packages/xt/laravel-login-history)
-[![Total Downloads](https://img.shields.io/packagist/dt/xt/login-history.svg?style=flat-square)](https://packagist.org/packages/xt/laravel-login-history)
+[![Latest Version on Packagist](https://img.shields.io/packagist/v/xt/laravel-login-history.svg?style=flat-square)](https://packagist.org/packages/xt/laravel-login-history)
+[![Total Downloads](https://img.shields.io/packagist/dt/xt/laravel-login-history.svg?style=flat-square)](https://packagist.org/packages/xt/laravel-login-history)
 
 
 Store login history of user (ip, region, country, user agent).
@@ -16,13 +16,13 @@ composer require xt/laravel-login-history
 
 ## Run Migrations
 Publish the migrations with this artisan command:
-```cmd
+```bash
 php artisan vendor:publish --tag=laravel-login-history-migrations
 ```
 
 ## Configuration
 You can publish the config file with this artisan command:
-```cmd
+```bash
 php artisan vendor:publish --tag=laravel-login-history-config
 ```
 
@@ -43,6 +43,12 @@ Call following function after user login successfully
 use \Illuminate\Support\Facades\Auth;
 
 Auth::user()->addLoginHistory();
+```
+
+## IpInfo API token
+get api token from [ipinfo.io](https://ipinfo.io/) and add it to your .env file
+```
+IPINFO_API_TOKEN=xxxxxx
 ```
 
 ### Testing
