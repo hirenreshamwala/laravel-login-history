@@ -1,0 +1,51 @@
+{
+    "name": "xt/login-history",
+    "description": "store login history of user",
+    "keywords": [
+        "xt",
+        "login-history"
+    ],
+    "homepage": "https://github.com/hirenreshamwala/laravel-login-history",
+    "license": "MIT",
+    "type": "library",
+    "authors": [
+        {
+            "name": "Hiren Reshamwala",
+            "email": "hiren.reshamwala@gmail.com",
+            "role": "Developer"
+        }
+    ],
+    "require": {
+        "php": "^7.4|^8.0",
+        "illuminate/support": "^8.0"
+    },
+    "require-dev": {
+        "orchestra/testbench": "^6.0",
+        "phpunit/phpunit": "^9.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "Xt\\LoginHistory\\": "src"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Xt\\LoginHistory\\Tests\\": "tests"
+        }
+    },
+    "scripts": {
+        "test": "vendor/bin/phpunit",
+        "test-coverage": "vendor/bin/phpunit --coverage-html coverage"
+
+    },
+    "config": {
+        "sort-packages": true
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Xt\\LoginHistory\\LoginHistoryServiceProvider"
+            ]
+        }
+    }
+}
