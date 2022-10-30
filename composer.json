@@ -1,5 +1,5 @@
 {
-    "name": "xt/login-history",
+    "name": "xt/laravel-login-history",
     "description": "store login history of user",
     "keywords": [
         "xt",
