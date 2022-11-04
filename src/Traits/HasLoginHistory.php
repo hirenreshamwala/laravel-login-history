@@ -24,8 +24,8 @@ trait HasLoginHistory
         $ipInfo = LoginHistory::getIpInfo($user_ip);
         $region = $ipInfo['region'] ?? null;
         $country = $ipInfo['country'] ?? null;
-        $lat = $ipInfo['lat'] ?? null;
-        $lng = $ipInfo['lng'] ?? null;
+        $loc = $ipInfo['loc'] ?? ',';
+        [$lat, $lng] = explode(',', $loc);
 
         UserLoginHistory::create([
             'user_id' => $this->id,
