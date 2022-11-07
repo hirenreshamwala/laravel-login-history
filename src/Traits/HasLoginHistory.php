@@ -27,7 +27,7 @@ trait HasLoginHistory
         $loc = $ipInfo['loc'] ?? ',';
         [$lat, $lng] = explode(',', $loc);
 
-        UserLoginHistory::create([
+        return UserLoginHistory::create([
             'user_id' => $this->id,
             'ip_address' => $user_ip,
             'user_agent' => $user_agent,
