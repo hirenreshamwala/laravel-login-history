@@ -14,7 +14,7 @@ use Xt\LoginHistory\Models\UserLoginHistory;
  */
 trait HasLoginHistory
 {
-    public function addLoginHistory(): void
+    public function addLoginHistory()
     {
         if (!($this instanceof User)){
             return;
