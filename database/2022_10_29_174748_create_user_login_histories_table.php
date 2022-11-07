@@ -24,6 +24,9 @@ return new class extends Migration
             $table->string('lat', 50)->nullable();
             $table->string('lng', 50)->nullable();
             $table->text('response')->nullable();
+            $table->timestamp('verified_ip_at')->nullable();
+            $table->timestamp('verified_device_at')->nullable();
+            $table->tinyInteger('is_mobile')->default(0)->comment('0 - false, 1 - true');
             $table->timestamps();
         });
     }

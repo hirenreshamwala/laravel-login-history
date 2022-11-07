@@ -36,6 +36,7 @@ trait HasLoginHistory
             'lat' => $lat,
             'lng' => $lng,
             'response' => $ipInfo,
+            'is_mobile' => LoginHistory::isMobileDevice($user_agent)
         ]);
     }
 }
